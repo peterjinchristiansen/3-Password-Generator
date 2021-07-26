@@ -8,8 +8,19 @@ function generate() {
       var password = '';
      
     //randomly determining the password length (limited from 8 - 128)
-     
-      var passwordLength = Math.floor(Math.random() * 120) + 8;
+
+      var passwordLength = prompt("How long would you like the password to be (enter a number between 8 and 128)?");
+      var passwordLengthCheck = isNaN(passwordLength);
+      if (passwordLength === "") {
+        alert("At least enter something!")
+        return;
+      } else if (passwordLengthCheck == true) {
+        alert("That's not a number you melon!");
+        return;
+      } else if (passwordLength > 128 || passwordLength < 8) {
+        alert("That's not a number between 8 and 128! >:(");
+        return;
+      }
      
     //asking if the user would like to include certain types of characters
      

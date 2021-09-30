@@ -1,5 +1,8 @@
 // Assignment code here
  
+var generatePassword = document.getElementById('generate');
+generatePassword.onclick = generate;
+
 function generate() {
  
     //creating a placeholder for the options and password
@@ -24,32 +27,34 @@ function generate() {
      
     //asking if the user would like to include certain types of characters
      
-      var lowPrompt = prompt("Would you like to include lowercase characters?");
-      var uppPrompt = prompt("Would you like to include uppercase characters?");
-      var numPrompt = prompt("Would you like to include numeric characters?");
-      var spePrompt = prompt("Would you like to include special characters?");
-     
-    //converting the user responses to lowercase to account for capitalization
-     
-      var low = lowPrompt.toLowerCase();
-      var upp = uppPrompt.toLowerCase();
-      var num = numPrompt.toLowerCase();
-      var spe = spePrompt.toLowerCase();
+      var lowConfirm = confirm("If you would like lowercase characters, click 'Ok'; otherwise, click 'Cancel'");
+      var uppConfirm = confirm("If you would like uppercase characters, click 'Ok'; otherwise, click 'Cancel'");
+      var numConfirm = confirm("If you would like numeric characters, click 'Ok'; otherwise, click 'Cancel'");
+      var speConfirm = confirm("If you would like special characters, click 'Ok'; otherwise, click 'Cancel'");
      
     //adding characters to the options depending on user input
      
-      if (low === "yes") {
+      if (lowConfirm) {
         options = options + "qwertyuiopasdfghjklzxcvbnm";
       }
-      if (upp === "yes") {
+
+      if (uppConfirm) {
         options = options + "QWERTYUIOPASDFGHJKLZXCVBNM";
       }
-      if (num === "yes") {
+
+      if (numConfirm) {
         options = options + "1234567890";
       }
-      if (spe === "yes") {
+
+      if (speConfirm) {
         options = options + "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
       }
+
+      if(!lowConfirm && !uppConfirm && !numConfirm && !speConfirm) {
+        alert("ERROR: Failed to produce a password; please select 'Ok' for at least one of the options")
+        return;
+      }
+
       var optionLength = options.length;
      
      

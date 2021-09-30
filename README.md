@@ -1,4 +1,6 @@
 # Password Generator
+
+---
   
 ## Description
   
@@ -8,15 +10,11 @@ This project is designed to take in user input and display a randomly generated 
   
 ## Table of Contents
   
-[Installation](#installation)
-  
 [Usage](#usage)
   
-[Contributing](#contributing)
-  
-[Tests](#tests)
-  
 [Questions](#questions)
+
+[Screenshot](#screenshot)
 
 ---
   

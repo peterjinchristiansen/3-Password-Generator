@@ -4,7 +4,7 @@
   
 ## Description
   
-This project is designed to take in user input and display a randomly generated password.
+    This project is designed to take in user input and display a randomly generated password.
 
 ---
   

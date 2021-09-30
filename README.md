@@ -20,7 +20,7 @@
   
 ## Usage
   
-Link to deployed website: 
+Link to deployed website: https://peterjinchristiansen.github.io/3-Password-Generator/
   
 ---
   
